@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpPower = 13f;
     [SerializeField] private float turnSpeed = 15f;
-    [SerializeField] private Transform rayStartPoint;
+    [SerializeField] private Transform[] rayStartPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -58,8 +58,16 @@ public class Movement : MonoBehaviour
 
     private bool OnGroundCheck()
     {
-        bool hit = Physics.Raycast(rayStartPoint.position, Vector3.down , 0.25f);
-        Debug.DrawRay(rayStartPoint.position, Vector3.down * 0.25f,Color.red);
+        bool hit = false;
+
+        for (int i = 0; i < rayStartPoints.Length; i++)
+        {
+            hit = Physics.Raycast(rayStartPoints[i].position, Vector3.down, 0.25f);
+            Debug.DrawRay(rayStartPoints[i].position, Vector3.down * 0.25f, Color.red);
+        }
+         
+        
+        
         if (hit)
         {
             return true;
