@@ -6,6 +6,22 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 2;
     private int currentHealth;
+    public int GetHealth  //C# Priority
+    {
+        get
+        {
+            return currentHealth;
+        }
+        set
+        {
+            currentHealth = value;
+            if(currentHealth > maxHealth)
+            {
+                currentHealth = maxHealth;
+            }
+        }
+    }
+
     void Start()
     {
         currentHealth = maxHealth;

@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float turnSpeed = 15f;
     [SerializeField] private Transform[] rayStartPoints;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +67,6 @@ public class Movement : MonoBehaviour
             Debug.DrawRay(rayStartPoints[i].position, Vector3.down * 0.25f, Color.red);
         }
          
-        
-        
         if (hit)
         {
             return true;

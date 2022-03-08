@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 5240868860536565921}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,6 +554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammo: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
   firePoint: {fileID: 8180654764265790497}
+  fireRate: 0.5
+  ammoCount: 5
 --- !u!114 &5240868860536565921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,9 +568,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca2d0eb180899644bc58fdabdc72ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpPower: 15
-  turnSpeed: 15
+  speed: 8
+  jumpPower: 10
+  turnSpeed: 20
   rayStartPoints:
   - {fileID: 6998055668365286812}
   - {fileID: 726587815513984391}

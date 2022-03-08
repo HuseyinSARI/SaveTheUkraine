@@ -9,11 +9,27 @@ public class Attack : MonoBehaviour
 
     [SerializeField] private float fireRate = 0.5f;
     private float currentFireRate = 0f;
-    [SerializeField] private int ammoCount = 5;
+     private int ammoCount = 0;
+    [SerializeField] private int maxAmmoCount = 5;
+    public int GetAmmo
+    {
+        get
+        {
+            return ammoCount;
+        }
+        set
+        {
+            ammoCount = value;
+            if(ammoCount > maxAmmoCount)
+            {
+                ammoCount = maxAmmoCount;
+            }
+        }
+    }
 
     void Start()
     {
-        
+        ammoCount = maxAmmoCount;
     }
 
     // Update is called once per frame
@@ -36,7 +52,7 @@ public class Attack : MonoBehaviour
             }
                 
         }
-        print(Time.deltaTime);
+        
     }
 
     private void Fire()
