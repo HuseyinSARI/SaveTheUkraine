@@ -9,6 +9,8 @@ public class Attack : MonoBehaviour
 
     [SerializeField] private float fireRate = 0.5f;
     private float currentFireRate = 0f;
+    [SerializeField] private int ammoCount = 5;
+
     void Start()
     {
         
@@ -27,8 +29,12 @@ public class Attack : MonoBehaviour
         {
             if(currentFireRate <= 0)
             { 
-                Fire();
+                if(ammoCount > 0)
+                {
+                    Fire();
+                }
             }
+                
         }
         print(Time.deltaTime);
     }
@@ -46,7 +52,10 @@ public class Attack : MonoBehaviour
         {
             targetRotation = 270f;
         }
-        Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+       
         currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
+        ammoCount -= 1; 
+
+        Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
     }
 }
