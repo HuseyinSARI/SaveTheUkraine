@@ -56,6 +56,7 @@ public class Attack : MonoBehaviour
         currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
         ammoCount -= 1; 
 
-        Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+        GameObject bulletClone = Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+        bulletClone.GetComponent<Bullet>().owner = gameObject;
     }
 }

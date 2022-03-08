@@ -18,17 +18,20 @@ public class Target : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<Bullet>() == true)
-        {
-            Destroy(other.gameObject);
+        Bullet bullet = other.gameObject.GetComponent<Bullet>();
 
-            currentHealth--;
-            if(currentHealth <= 0) 
+        if (bullet)
+        {
+            if(bullet.owner != gameObject) // for bullet not hit own owner - kurþunun kendi sahibini vurmamasý için
             {
-                Dead();
+                currentHealth--;
+                if(currentHealth <= 0) 
+                {
+                    Dead();
+                }
+
+                Destroy(other.gameObject);
             }
-                
-            
         }
     }
     private void Dead()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed = 10f;
-    // public int bulletPower = 2;
+    public GameObject owner;
 
     void Start()
     {
@@ -16,5 +16,12 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.up * bulletSpeed * Time.deltaTime;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+       if(other.gameObject.GetComponent<Target>() == false)
+        {
+            Destroy(gameObject);
+        }
     }
 }
