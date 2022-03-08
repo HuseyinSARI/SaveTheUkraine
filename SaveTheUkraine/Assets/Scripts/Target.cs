@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private int maxHealth = 2;
+    private int currentHealth;
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -20,7 +21,18 @@ public class Target : MonoBehaviour
         if(other.gameObject.GetComponent<Bullet>() == true)
         {
             Destroy(other.gameObject);
-            Destroy(gameObject);
+
+            currentHealth--;
+            if(currentHealth <= 0) 
+            {
+                Dead();
+            }
+                
+            
         }
+    }
+    private void Dead()
+    {
+        Destroy(gameObject);
     }
 }
