@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         TakeInput();
-        print(OnGroundCheck());
+        
     }
 
     private void TakeInput()

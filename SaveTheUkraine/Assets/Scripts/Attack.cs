@@ -7,7 +7,8 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject ammo;
     [SerializeField] private Transform firePoint;
 
-    // Start is called before the first frame update
+    [SerializeField] private float fireRate = 0.5f;
+    private float currentFireRate = 0f;
     void Start()
     {
         
@@ -16,16 +17,25 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(currentFireRate > 0)
         {
-            Fire();
+            currentFireRate -= Time.deltaTime; //zamanla atýþ hýzýný azaltmak
         }
-        print(transform.eulerAngles.y);
+
+        
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(currentFireRate <= 0)
+            { 
+                Fire();
+            }
+        }
+        print(Time.deltaTime);
     }
 
     private void Fire()
     {
-       float difference = 180f - transform.eulerAngles.y;
+       float difference = 180f - transform.eulerAngles.y; //karakter hangi tarafa yakýnsa merminin rotasyonunu oraya eþitlemek.
 
        float targetRotation = 90f;
         if(difference >= 90f)
@@ -36,6 +46,7 @@ public class Attack : MonoBehaviour
         {
             targetRotation = 270f;
         }
-       Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+        Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+        currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
     }
 }
