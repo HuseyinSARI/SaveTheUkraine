@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && OnGroundCheck() )
         {
-            rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, (jumpPower * 100) * Time.deltaTime , 0);
+            rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime,0,15) , 0);
             
         }
         else

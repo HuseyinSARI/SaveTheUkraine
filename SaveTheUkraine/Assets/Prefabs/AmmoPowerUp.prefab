@@ -210,11 +210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c66d318bf70d1b9428ac793b7a43dd65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPowerup: 0
+  healthPowerUp: 0
   healAmount: 2
   ammoPowerUp: 1
   ammoAmount: 3
-  turnSpeed: 100
+  turnVector: {x: 1, y: 1, z: 1}
+  period: 2
+  scaleVector: {x: 0.13, y: 0.13, z: 0.13}
 --- !u!1 &5500896477064882288
 GameObject:
   m_ObjectHideFlags: 0

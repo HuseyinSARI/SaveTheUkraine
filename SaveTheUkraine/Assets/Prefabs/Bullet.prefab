@@ -180,7 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddadfac74dae0f49b7c40d86eaf41cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 10
+  bulletSpeed: 15
+  owner: {fileID: 0}
 --- !u!136 &-6590917856108428365
 CapsuleCollider:
   m_ObjectHideFlags: 0

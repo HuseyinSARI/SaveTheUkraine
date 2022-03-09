@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,17 @@ public class PowerUp : MonoBehaviour
     public int ammoAmount = 3;
 
     [Header("Transform Settings")]
-    [SerializeField] private float turnSpeed = 150f;
+    [SerializeField] private Vector3 turnVector = Vector3.zero;
+
+    [Header("Scale Settings")]
+    [SerializeField] private float period = 2f;
+    [SerializeField] private Vector3 scaleVector;
+    private float scaleFactor;
+    private Vector3 startScale;
 
     void Start()
     {
+        startScale = transform.localScale;
         if(healthPowerUp && ammoPowerUp)
         {
             healthPowerUp = false;
@@ -35,7 +43,28 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(turnSpeed * Time.deltaTime , turnSpeed*Time.deltaTime, turnSpeed * Time.deltaTime);
+        transform.Rotate(turnVector);
+        SinusWave();
+    }
+
+    private void SinusWave()
+    {
+        if ( period <= 0f)
+        {
+            period = 0.1f;
+        }
+        float cycles = Time.timeSinceLevelLoad / period;   //sin dalgasýnýn periyodunu dýþarýdan kontrol edebilmek için
+                                                                     
+        const float piX2 = Mathf.PI *2 ;    // 2 pi
+
+        float sinusWave = Mathf.Sin(cycles * piX2); // sin dalgasýnýn y eksisndeki float deðerini oluþturduk -1, 1
+                                                                  
+        scaleFactor = sinusWave / 2 + 0.5f;  //  0, 1
+        
+        Vector3 offset = scaleVector * scaleFactor;   // scale deðerine inspector dan deðiþtirmek için
+                                                    
+        transform.localScale = startScale + offset;  // uygula
+
     }
 
     private void OnTriggerEnter(Collider other)

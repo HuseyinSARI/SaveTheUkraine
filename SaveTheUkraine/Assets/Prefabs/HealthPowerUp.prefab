@@ -218,7 +218,9 @@ MonoBehaviour:
   healAmount: 1
   ammoPowerUp: 0
   ammoAmount: 3
-  turnSpeed: 150
+  turnVector: {x: 0, y: 0.5, z: 0}
+  period: 2
+  scaleVector: {x: 0.13, y: 0.13, z: 0.13}
 --- !u!1 &5889132957656571636
 GameObject:
   m_ObjectHideFlags: 0
