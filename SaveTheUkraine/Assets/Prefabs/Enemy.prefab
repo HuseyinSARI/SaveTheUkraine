@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8963969935064300179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7244112365939214715}
   - component: {fileID: 5574335518993727802}
   - component: {fileID: 441768697874045840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5441949287083996486}
   - component: {fileID: 878062378674160256}
   - component: {fileID: 7872375511952321641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 3301168851869481479}
   - component: {fileID: 7966200417830994721}
   - component: {fileID: 3414451447939073146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 6265979728587505181}
   - component: {fileID: 834911028472358945}
   - component: {fileID: 1790160552748550219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4828241689996393728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 573284019122481973}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 3080556289393856401}
   - component: {fileID: 2731992330456808523}
   - component: {fileID: 2146813673635555442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: L_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 3480217853783114213}
   - component: {fileID: 686886994441942122}
   - component: {fileID: 1805343856745504210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunInner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,11 +596,10 @@ GameObject:
   - component: {fileID: 4524005031886669751}
   - component: {fileID: 4524005031886669750}
   - component: {fileID: 4524005031886669770}
-  - component: {fileID: 8535219514736678831}
+  - component: {fileID: 5443735231612451593}
   - component: {fileID: 8594776534086773625}
-  - component: {fileID: 4524005031886669749}
   - component: {fileID: 3603296150852757884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -614,8 +613,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4524005031886669744}
-  m_LocalRotation: {x: -0.43340936, y: 0.55870956, z: -0.43340924, w: 0.55870956}
-  m_LocalPosition: {x: -3.79, y: 1.5, z: -0.39584088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4593829555615819240}
@@ -628,7 +627,7 @@ Transform:
   - {fileID: 2402939186315763423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: -75.604}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4524005031886669751
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -694,7 +693,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 88
   m_CollisionDetection: 0
---- !u!136 &8535219514736678831
+--- !u!136 &5443735231612451593
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -704,10 +703,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.8000093
+  m_Height: 2.2637587
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.13187933, z: 0}
 --- !u!114 &8594776534086773625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,25 +723,6 @@ MonoBehaviour:
   firePoint: {fileID: 573284019122481973}
   fireRate: 0.5
   maxAmmoCount: 5
---- !u!114 &4524005031886669749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4524005031886669744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca2d0eb180899644bc58fdabdc72ddb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  jumpPower: 10
-  turnSpeed: 20
-  rayStartPoints:
-  - {fileID: 1688047633291881096}
-  - {fileID: 8963969935064300179}
-  - {fileID: 8554799520097736708}
 --- !u!114 &3603296150852757884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,8 +735,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c411b189e6d0b1c41aa0b7ca13ab4e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movePoints: []
+  movePoints:
+  - {fileID: 0}
+  - {fileID: 0}
   speed: 5
+  shootRange: 10
+  shootLayer:
+    serializedVersion: 2
+    m_Bits: 192
+  aimTransform: {fileID: 573284019122481973}
 --- !u!1 &5146029418029650050
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +755,7 @@ GameObject:
   - component: {fileID: 5684569982769808019}
   - component: {fileID: 3385105893601837358}
   - component: {fileID: 1737248517998307595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sight 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,8 +836,7 @@ GameObject:
   - component: {fileID: 2402939186315763423}
   - component: {fileID: 3165081996936491278}
   - component: {fileID: 8538688741477920093}
-  - component: {fileID: 7909181517197785176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,19 +906,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7909181517197785176
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5242554025696643229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5302863890361557908
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8554799520097736708}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +947,7 @@ GameObject:
   - component: {fileID: 2970996432232413807}
   - component: {fileID: 4774700258339971378}
   - component: {fileID: 7106959168519218040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1028,7 @@ GameObject:
   - component: {fileID: 9037148021771885504}
   - component: {fileID: 2691379362696786207}
   - component: {fileID: 1106144925667961719}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,7 +1109,7 @@ GameObject:
   - component: {fileID: 4593829555615819240}
   - component: {fileID: 6518337667576585716}
   - component: {fileID: 9080030006935103575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1190,7 @@ GameObject:
   - component: {fileID: 8443110522878315448}
   - component: {fileID: 7109666652373124690}
   - component: {fileID: 608214151185020741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: R_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1297,7 +1270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290032059366852698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundCheckRays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1305,7 @@ GameObject:
   - component: {fileID: 7475994707802254981}
   - component: {fileID: 599638242091485809}
   - component: {fileID: 8831604062062859672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1413,7 +1386,7 @@ GameObject:
   - component: {fileID: 2044089204063046789}
   - component: {fileID: 5995270201440146266}
   - component: {fileID: 964803058035395016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1688047633291881096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}

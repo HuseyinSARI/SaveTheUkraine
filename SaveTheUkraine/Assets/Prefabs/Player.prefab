@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6998055668365286812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 241158789097143468}
   - component: {fileID: 1502421941724344646}
   - component: {fileID: 9080382066350145617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: R_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7463640784486678350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheckRays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 5310798706527998716}
   - component: {fileID: 3172497315091720928}
   - component: {fileID: 608425494573899587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 799765876718513364}
   - component: {fileID: 5992747012691625483}
   - component: {fileID: 8731037248836164707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 6865783188396248443}
   - component: {fileID: 3760528207540819494}
   - component: {fileID: 1500768882138567788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 57403560576741136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Check (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,8 @@ GameObject:
   - component: {fileID: 985915579}
   - component: {fileID: 87247712567008365}
   - component: {fileID: 5240868860536565921}
-  m_Layer: 0
+  - component: {fileID: 1443102408}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -518,7 +519,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5240868860536565924}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 500
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -536,10 +537,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.70565844
+  m_Height: 2.3226213
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.16131067, z: 0}
 --- !u!114 &87247712567008365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,7 +556,7 @@ MonoBehaviour:
   ammo: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
   firePoint: {fileID: 8180654764265790497}
   fireRate: 0.5
-  ammoCount: 5
+  maxAmmoCount: 5
 --- !u!114 &5240868860536565921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,13 +569,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca2d0eb180899644bc58fdabdc72ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  jumpPower: 10
+  speed: 20
+  jumpPower: 18
   turnSpeed: 20
   rayStartPoints:
   - {fileID: 6998055668365286812}
   - {fileID: 726587815513984391}
   - {fileID: 57403560576741136}
+--- !u!114 &1443102408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240868860536565924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade22bfb22bd40a48aa3e9f13b61ee23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
 --- !u!1 &6685934961968287698
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +600,7 @@ GameObject:
   - component: {fileID: 6679794215959263365}
   - component: {fileID: 6024352171446192991}
   - component: {fileID: 7762010324972134246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726587815513984391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Check (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +712,7 @@ GameObject:
   - component: {fileID: 1367811421627039343}
   - component: {fileID: 4264685043779745326}
   - component: {fileID: 8093613562141092996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -779,7 +793,7 @@ GameObject:
   - component: {fileID: 5719677605495382710}
   - component: {fileID: 503469390076435581}
   - component: {fileID: 7666827986781658630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,13 +870,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5240868860536565920}
     m_Modifications:
+    - target: {fileID: 493205770984492432, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1987753959014662669, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: m_Name
       value: FirePoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1987753959014662669, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321691058144015299, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2436633938033205527, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: m_Name
       value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436633938033205527, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543677023643435312, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654159665165315543, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820642273779819529, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764603999899240851, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9063813827432227857, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: m_RootOrder
