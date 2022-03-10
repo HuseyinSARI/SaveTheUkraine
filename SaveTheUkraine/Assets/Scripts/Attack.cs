@@ -6,11 +6,12 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private GameObject ammo;
     [SerializeField] private Transform firePoint;
-
     [SerializeField] private float fireRate = 0.5f;
-    private float currentFireRate = 0f;
-     private int ammoCount = 0;
     [SerializeField] private int maxAmmoCount = 5;
+    [SerializeField] private bool isPlayer = false;
+    private float currentFireRate = 0f;
+    private int ammoCount = 0;
+
     public int GetAmmo
     {
         get
@@ -26,7 +27,24 @@ public class Attack : MonoBehaviour
             }
         }
     }
-
+    public float GetCurrentFireRate
+    {
+        get
+        {
+            return currentFireRate;
+        }
+        set
+        {
+            currentFireRate = value;
+        }
+    }
+    public int GetClipSize
+    {
+        get
+        {
+            return maxAmmoCount;
+        }
+    }
     void Start()
     {
         ammoCount = maxAmmoCount;
@@ -40,22 +58,23 @@ public class Attack : MonoBehaviour
             currentFireRate -= Time.deltaTime; //zamanla atýþ hýzýný azaltmak
         }
 
-        
-        if(Input.GetMouseButtonDown(0))
-        {
-            if(currentFireRate <= 0)
-            { 
-                if(ammoCount > 0)
-                {
-                    Fire();
+        if (isPlayer) 
+        { 
+            if(Input.GetMouseButtonDown(0))
+            {
+                if(currentFireRate <= 0)
+                { 
+                    if(ammoCount > 0)
+                    {
+                        Fire();
+                    }
                 }
-            }
                 
+            }
         }
-        
     }
 
-    private void Fire()
+    public void Fire()
     {
        float difference = 180f - transform.eulerAngles.y; //karakter hangi tarafa yakýnsa merminin rotasyonunu oraya eþitlemek.
 
