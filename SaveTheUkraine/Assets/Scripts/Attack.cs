@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [SerializeField] private GameObject[] weapons;
     [SerializeField] private GameObject ammo;
-    [SerializeField] private Transform firePoint;
-    [SerializeField] private float fireRate = 0.5f;
-    [SerializeField] private int maxAmmoCount = 5;
     [SerializeField] private bool isPlayer = false;
-    private float currentFireRate = 0f;
+
+    private int maxAmmoCount = 5;
     private int ammoCount = 0;
+    private Transform fireTransform;
+    private float fireRate = 0.5f;
+    private float currentFireRate = 0f;
+    
 
     public int GetAmmo
     {
@@ -44,10 +47,36 @@ public class Attack : MonoBehaviour
         {
             return maxAmmoCount;
         }
+        set
+        {
+            maxAmmoCount = value;
+        }
+    }
+    public float GetFireRate
+    {
+        get
+        {
+            return fireRate;
+        }
+        set
+        {
+            fireRate = value;
+        }
+    }
+    public Transform GetFireTransform
+    {
+        get
+        {
+            return fireTransform;
+        }
+        set
+        {
+            fireTransform = value;
+        }
     }
     void Start()
     {
-        ammoCount = maxAmmoCount;
+        //ammoCount = maxAmmoCount;
     }
 
     // Update is called once per frame
@@ -79,10 +108,12 @@ public class Attack : MonoBehaviour
             switch (Input.inputString)
             {
                 case "1":
-                    print("pressed 1");
+                    weapons[0].SetActive(true);
+                    weapons[1].SetActive(false);
                     break;
                 case "2":
-                    print("pressed 2");
+                    weapons[0].SetActive(false);
+                    weapons[1].SetActive(true);
                     break;
                 default:
                     break;
@@ -107,7 +138,7 @@ public class Attack : MonoBehaviour
         currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
         ammoCount -= 1; 
 
-        GameObject bulletClone = Instantiate(ammo, firePoint.position, Quaternion.Euler(0f, 0f, targetRotation));
+        GameObject bulletClone = Instantiate(ammo, fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
         bulletClone.GetComponent<Bullet>().owner = gameObject;
     }
 }
