@@ -53,23 +53,39 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentFireRate > 0)
+        if (currentFireRate > 0)
         {
             currentFireRate -= Time.deltaTime; //zamanla atýþ hýzýný azaltmak
         }
 
-        if (isPlayer) 
-        { 
-            if(Input.GetMouseButtonDown(0))
+        PlayerInput();
+    }
+
+    private void PlayerInput()
+    {
+        if (isPlayer)
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                if(currentFireRate <= 0)
-                { 
-                    if(ammoCount > 0)
+                if (currentFireRate <= 0)
+                {
+                    if (ammoCount > 0)
                     {
                         Fire();
                     }
                 }
-                
+
+            }
+            switch (Input.inputString)
+            {
+                case "1":
+                    print("pressed 1");
+                    break;
+                case "2":
+                    print("pressed 2");
+                    break;
+                default:
+                    break;
             }
         }
     }
