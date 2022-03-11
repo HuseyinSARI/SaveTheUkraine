@@ -10,14 +10,17 @@ public class Movement : MonoBehaviour
     [SerializeField] private float turnSpeed = 15f;
     [SerializeField] private Transform[] rayStartPoints;
 
-    
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         rigidbodyRef = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        
+    }
+
+    
     void Update()
     {
         TakeInput();

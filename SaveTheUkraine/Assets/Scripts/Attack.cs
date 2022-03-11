@@ -108,10 +108,15 @@ public class Attack : MonoBehaviour
             switch (Input.inputString)
             {
                 case "1":
+                    
+                    weapons[1].gameObject.GetComponent<Weapon>().GetCurrentWeaponAmmoCount = ammoCount; //silah deðiþtirdiðinde kapattýðýmýz silahýn mermi sayýsýný silaha geri yolluyoruz.
+                  
                     weapons[0].SetActive(true);
                     weapons[1].SetActive(false);
                     break;
                 case "2":
+                    weapons[0].gameObject.GetComponent<Weapon>().GetCurrentWeaponAmmoCount = ammoCount; //silah deðiþtirdiðinde kapattýðýmýz silahýn mermi sayýsýný silaha geri yolluyoruz.
+                  
                     weapons[0].SetActive(false);
                     weapons[1].SetActive(true);
                     break;

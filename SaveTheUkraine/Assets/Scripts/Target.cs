@@ -22,12 +22,16 @@ public class Target : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+       currentHealth = maxHealth;     
+    }
     void Start()
     {
-        currentHealth = maxHealth;
+        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         

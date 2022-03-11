@@ -22,9 +22,14 @@ public class PowerUp : MonoBehaviour
     private float scaleFactor;
     private Vector3 startScale;
 
+    private void Awake()
+    {
+        startScale = transform.localScale;      
+    }
     void Start()
     {
-        startScale = transform.localScale;
+        
+
         if(healthPowerUp && ammoPowerUp)
         {
             healthPowerUp = false;

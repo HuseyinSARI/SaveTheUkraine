@@ -9,9 +9,28 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float fireRate;
     [SerializeField] private int clipSize;
     private int currentAmmoCount;
-    void Start()
+
+    public int GetCurrentWeaponAmmoCount
+    {
+        get
+        {
+            return currentAmmoCount;
+        }
+        set
+        {
+            currentAmmoCount = value;
+        }
+    }
+    //Deðer ve referans atamalarý oyun baþlamadan önce çaðýrýlmalý ve koþulmalý.
+    //"Awake" fonksiyonu diðer fonksiyonlardan önce ilk olarak oyunda çalýþýr. 
+    // Deðer atamalarýný bu metotda yapýlmalýdýr.
+    private void Awake()
     {
         currentAmmoCount = clipSize;
+    }
+    void Start()
+    {
+        
     }
 
     void Update()
@@ -26,7 +45,7 @@ public class Weapon : MonoBehaviour
             attack.GetFireTransform = fireTransform;
             attack.GetFireRate = fireRate;
             attack.GetClipSize = clipSize;
-            attack.GetAmmo = clipSize;
+            attack.GetAmmo = currentAmmoCount;
         }
     }
 }

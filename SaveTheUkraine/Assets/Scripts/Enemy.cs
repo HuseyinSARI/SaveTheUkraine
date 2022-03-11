@@ -15,10 +15,14 @@ public class Enemy : MonoBehaviour
     private bool isReloaded = false;
 
     private Attack attackRef;
-    void Start()
+    private void Awake()
     {
         attackRef = GetComponent<Attack>();
         aimTransform = attackRef.GetFireTransform;  //attack daki firepointi çektik
+    }
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
