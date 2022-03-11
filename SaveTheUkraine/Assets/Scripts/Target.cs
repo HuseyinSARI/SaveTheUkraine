@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    [SerializeField] private GameObject hitFX;
+    [SerializeField] private GameObject deadFX;
     [SerializeField] private int maxHealth = 2;
+
+
     private int currentHealth;
     public int GetHealth  //C# Priority
     {
@@ -45,6 +49,10 @@ public class Target : MonoBehaviour
             if(bullet.owner != gameObject) // for bullet not hit own owner - kurþunun kendi sahibini vurmamasý için
             {
                 currentHealth--;
+                if(hitFX != null)
+                {
+                    Instantiate(hitFX, transform.position, Quaternion.identity);
+                }
                 if(currentHealth <= 0) 
                 {
                     Dead();
@@ -56,6 +64,10 @@ public class Target : MonoBehaviour
     }
     private void Dead()
     {
+        if(deadFX != null)
+        {
+            Instantiate(deadFX, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

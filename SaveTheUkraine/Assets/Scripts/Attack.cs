@@ -144,6 +144,6 @@ public class Attack : MonoBehaviour
         ammoCount -= 1; 
 
         GameObject bulletClone = Instantiate(ammo, fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
-        bulletClone.GetComponent<Bullet>().owner = gameObject;
+        bulletClone.GetComponent<Bullet>().owner = gameObject;  //mermiyi oluþturduðumuz esnada sahibini tanýmlamak
     }
 }

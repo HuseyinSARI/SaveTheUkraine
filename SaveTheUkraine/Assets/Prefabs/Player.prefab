@@ -558,9 +558,6 @@ MonoBehaviour:
   - {fileID: 7596420138410594066}
   - {fileID: 8293474509221978265}
   ammo: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
-  firePoint: {fileID: 8180654764265790497}
-  fireRate: 0.5
-  maxAmmoCount: 5
   isPlayer: 1
 --- !u!114 &5240868860536565921
 MonoBehaviour:
@@ -593,7 +590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade22bfb22bd40a48aa3e9f13b61ee23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 200
+  hitFX: {fileID: 2443263360399287165, guid: 366ad4643297ffa4faa92ad5ed087ae4, type: 3}
+  deadFX: {fileID: 2577746073332232421, guid: 86d3de1deeb2c164fa89a4d4c81fd1d1, type: 3}
+  maxHealth: 20
 --- !u!1 &6685934961968287698
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5588314534450021911, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: fireRate
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: -5588314534450021911, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: fireTransform
