@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7023645268044618895}
   - component: {fileID: 1694879702290387618}
   - component: {fileID: 5772718087892258501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3738400583004963823}
   - component: {fileID: 7590387472591641039}
   - component: {fileID: 717924684674335886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AmmoPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 2471411866392877756}
   - component: {fileID: 1949566631534820821}
   - component: {fileID: 1216656861508941899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBackCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 1331654032701808420}
   - component: {fileID: 7016008517096700604}
   - component: {fileID: 6246758058275284607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

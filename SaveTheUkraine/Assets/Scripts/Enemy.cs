@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         attackRef = GetComponent<Attack>();
+        aimTransform = attackRef.GetFireTransform;  //attack daki firepointi çektik
     }
 
     // Update is called once per frame

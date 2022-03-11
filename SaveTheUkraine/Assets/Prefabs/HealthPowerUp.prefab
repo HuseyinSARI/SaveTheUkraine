@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5889132957525181440}
   - component: {fileID: 5889132957525181446}
   - component: {fileID: 5889132957525181447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5889132957622698520}
   - component: {fileID: 5889132957622698526}
   - component: {fileID: 524006645415206909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 5889132957656571643}
   - component: {fileID: 5889132957656571641}
   - component: {fileID: 5889132957656571642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 5889132957764556606}
   - component: {fileID: 5889132957764556604}
   - component: {fileID: 5889132957764556605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 5889132958004838225}
   - component: {fileID: 5889132958004838231}
   - component: {fileID: 5889132958004838224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 5889132958329609068}
   - component: {fileID: 5889132958329609074}
   - component: {fileID: 5889132958329609075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 5889132958340338952}
   - component: {fileID: 5889132958340338958}
   - component: {fileID: 5889132958340338959}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 5889132958813281229}
   - component: {fileID: 5889132958813281235}
   - component: {fileID: 5889132958813281228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 5889132959381880420}
   - component: {fileID: 5889132959381880426}
   - component: {fileID: 5889132959381880427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cross (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

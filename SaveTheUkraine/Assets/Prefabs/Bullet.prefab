@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8507348676964261075}
   - component: {fileID: 66499256490840830}
   - component: {fileID: 5149298966452850329}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -1009818081443929098}
   - component: {fileID: -6590917856108428365}
   - component: {fileID: 9097083868126206355}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 365865712114687864}
   - component: {fileID: 8517699110522256096}
   - component: {fileID: 4745067773014681123}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 3829497136458193632}
   - component: {fileID: 893801940489174409}
   - component: {fileID: 543601145536788503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletBackCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
