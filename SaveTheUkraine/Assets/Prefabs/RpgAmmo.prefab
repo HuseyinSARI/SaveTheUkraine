@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3403579614704079515}
   - component: {fileID: 4905980640293978902}
   - component: {fileID: 5470962267748382366}
-  m_Layer: 0
+  - component: {fileID: -1196512508780263108}
+  m_Layer: 9
   m_Name: RpgAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-1196512508780263108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632917398140047410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddadfac74dae0f49b7c40d86eaf41cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  owner: {fileID: 0}
 --- !u!1 &6634864197682225010
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +110,7 @@ GameObject:
   - component: {fileID: 2204212308388490208}
   - component: {fileID: 4716794077306259882}
   - component: {fileID: 3010053197822865564}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AmmoPin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1654cd9cbf63f544bb90c4178c1c0d8d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1654cd9cbf63f544bb90c4178c1c0d8d, type: 3}
 --- !u!4 &3789672196212782108 stripped
@@ -301,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1654cd9cbf63f544bb90c4178c1c0d8d, type: 3}
       propertyPath: m_Name
       value: Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1654cd9cbf63f544bb90c4178c1c0d8d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1654cd9cbf63f544bb90c4178c1c0d8d, type: 3}

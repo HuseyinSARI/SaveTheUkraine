@@ -665,7 +665,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.00433025, y: 0.9928817, z: -0.11275276, w: -0.03813145}
+  m_LocalRotation: {x: -0.0043302444, y: 0.9928817, z: -0.11275274, w: -0.038131412}
   m_LocalPosition: {x: 3.32, y: 4.5, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1435,7 +1435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993393679}
-  m_LocalRotation: {x: -0.004330249, y: 0.9928817, z: -0.11275274, w: -0.03813145}
+  m_LocalRotation: {x: -0.0043302444, y: 0.9928817, z: -0.112752736, w: -0.038131412}
   m_LocalPosition: {x: 3.32, y: 4.5, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1631,6 +1631,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8594776534086773625, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: ammo.Array.data[0]
+      value: 
+      objectReference: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
 --- !u!1001 &1689913315909944801
@@ -1697,6 +1701,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87247712567008365, guid: 12314719bea83f04fad033340a338ebd, type: 3}
+      propertyPath: ammo.Array.data[0]
+      value: 
+      objectReference: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
+    - target: {fileID: 87247712567008365, guid: 12314719bea83f04fad033340a338ebd, type: 3}
+      propertyPath: ammo.Array.data[1]
+      value: 
+      objectReference: {fileID: 5632917398140047410, guid: efc5b4e759798874982ccf76244daad0, type: 3}
     - target: {fileID: 5240868860536565920, guid: 12314719bea83f04fad033340a338ebd, type: 3}
       propertyPath: m_RootOrder
       value: 6
