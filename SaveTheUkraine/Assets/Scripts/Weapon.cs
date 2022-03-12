@@ -46,6 +46,7 @@ public class Weapon : MonoBehaviour
             attack.GetFireRate = fireRate;
             attack.GetClipSize = clipSize;
             attack.GetAmmo = currentAmmoCount;
+
         }
     }
 }

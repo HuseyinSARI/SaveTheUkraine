@@ -6,8 +6,8 @@ public class Target : MonoBehaviour
 {
     [SerializeField] private GameObject hitFX;
     [SerializeField] private GameObject deadFX;
-    [SerializeField] private int maxHealth = 2;
-
+    [SerializeField] private int maxHealth = 10;
+    private bool isColliding = false;
 
     private int currentHealth;
     public int GetHealth  //C# Priority
@@ -38,29 +38,35 @@ public class Target : MonoBehaviour
     
     void Update()
     {
-        
+        isColliding = false;
     }
     private void OnTriggerEnter(Collider other)
     {
-        Bullet bullet = other.gameObject.GetComponent<Bullet>();
+        if (isColliding) return;
+        isColliding = true;
 
-        if (bullet)
-        {
-            if(bullet.owner != gameObject) // for bullet not hit own owner - kurþunun kendi sahibini vurmamasý için
+            Bullet bullet = other.gameObject.GetComponent<Bullet>();
+
+            if (bullet)
             {
-                currentHealth--;
-                if(hitFX != null)
+                if (bullet.owner != gameObject) // for bullet not hit own owner - kurþunun kendi sahibini vurmamasý için
                 {
-                    Instantiate(hitFX, transform.position, Quaternion.identity);
-                }
-                if(currentHealth <= 0) 
-                {
-                    Dead();
-                }
 
-                Destroy(other.gameObject);
+                    currentHealth -= bullet.GetBulletPower;
+                    
+                    if (hitFX != null && currentHealth > 0)
+                    {
+                        Instantiate(hitFX, transform.position, Quaternion.identity);
+                    }
+                    if (currentHealth <= 0)
+                    {
+                        Dead();
+                    }
+
+                    Destroy(other.gameObject);
+                }
             }
-        }
+        
     }
     private void Dead()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapons;
-    [SerializeField] private GameObject ammo;
+    [SerializeField] private GameObject[] ammo;
     [SerializeField] private bool isPlayer = false;
 
     private int maxAmmoCount = 5;
@@ -141,9 +141,29 @@ public class Attack : MonoBehaviour
         }
        
         currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
-        ammoCount -= 1; 
+        ammoCount -= 1;
 
-        GameObject bulletClone = Instantiate(ammo, fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
-        bulletClone.GetComponent<Bullet>().owner = gameObject;  //mermiyi oluþturduðumuz esnada sahibini tanýmlamak
+        if (isPlayer)
+        {
+            if (weapons[0].activeSelf)
+            {
+                GameObject bulletClone;
+                bulletClone = Instantiate(ammo[0], fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
+                bulletClone.GetComponent<Bullet>().owner = gameObject;  //mermiyi oluþturduðumuz esnada sahibini tanýmlamak
+            }
+            else if (weapons[1].activeSelf)
+            {
+                GameObject bulletClone;
+                bulletClone = Instantiate(ammo[1], fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
+                bulletClone.GetComponent<Bullet>().owner = gameObject;  //mermiyi oluþturduðumuz esnada sahibini tanýmlamak
+            }
+        }
+        else
+        {
+            GameObject bulletClone;
+            bulletClone = Instantiate(ammo[0], fireTransform.position, Quaternion.Euler(0f, 0f, targetRotation));
+            bulletClone.GetComponent<Bullet>().owner = gameObject;  //mermiyi oluþturduðumuz esnada sahibini tanýmlamak
+        }     
+        
     }
 }
