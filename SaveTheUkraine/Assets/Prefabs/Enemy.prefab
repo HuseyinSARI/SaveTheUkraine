@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8963969935064300179}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Ground Check (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7244112365939214715}
   - component: {fileID: 5574335518993727802}
   - component: {fileID: 441768697874045840}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 3080556289393856401}
   - component: {fileID: 2731992330456808523}
   - component: {fileID: 2146813673635555442}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: L_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,8 @@ GameObject:
   - component: {fileID: 8594776534086773625}
   - component: {fileID: 3603296150852757884}
   - component: {fileID: 6730455307170581732}
-  m_Layer: 7
+  - component: {fileID: 2980751986056004883}
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -330,7 +331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons: []
-  ammo: {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
+  ammo:
+  - {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
+  - {fileID: 5632917398140047410, guid: efc5b4e759798874982ccf76244daad0, type: 3}
   isPlayer: 0
 --- !u!114 &3603296150852757884
 MonoBehaviour:
@@ -369,6 +372,103 @@ MonoBehaviour:
   hitFX: {fileID: 2443263360399287165, guid: 366ad4643297ffa4faa92ad5ed087ae4, type: 3}
   deadFX: {fileID: 2577746073332232421, guid: 86d3de1deeb2c164fa89a4d4c81fd1d1, type: 3}
   maxHealth: 10
+  clipToPlay: {fileID: 8300000, guid: a96280ab0386e384fa0633e56101bb6f, type: 3}
+--- !u!82 &2980751986056004883
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524005031886669744}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5242554025696643229
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +480,7 @@ GameObject:
   - component: {fileID: 2402939186315763423}
   - component: {fileID: 3165081996936491278}
   - component: {fileID: 8538688741477920093}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8554799520097736708}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Ground Check (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +591,7 @@ GameObject:
   - component: {fileID: 2970996432232413807}
   - component: {fileID: 4774700258339971378}
   - component: {fileID: 7106959168519218040}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Pupil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +672,7 @@ GameObject:
   - component: {fileID: 9037148021771885504}
   - component: {fileID: 2691379362696786207}
   - component: {fileID: 1106144925667961719}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +753,7 @@ GameObject:
   - component: {fileID: 4593829555615819240}
   - component: {fileID: 6518337667576585716}
   - component: {fileID: 9080030006935103575}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Jacket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +834,7 @@ GameObject:
   - component: {fileID: 8443110522878315448}
   - component: {fileID: 7109666652373124690}
   - component: {fileID: 608214151185020741}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: R_Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290032059366852698}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: GroundCheckRays
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +949,7 @@ GameObject:
   - component: {fileID: 2044089204063046789}
   - component: {fileID: 5995270201440146266}
   - component: {fileID: 964803058035395016}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +1028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1688047633291881096}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,6 +1072,38 @@ PrefabInstance:
       propertyPath: fireTransform
       value: 
       objectReference: {fileID: 2946211712346398247}
+    - target: {fileID: 493205770984492432, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987753959014662669, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321691058144015299, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436633938033205527, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543677023643435312, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654159665165315543, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820642273779819529, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764603999899240851, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9063813827432227857, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: m_RootOrder
       value: 6

@@ -11,10 +11,22 @@ public class Attack : MonoBehaviour
     private int maxAmmoCount = 5;
     private int ammoCount = 0;
     private Transform fireTransform;
+    private AudioClip clipToPlay;
+    private AudioSource audioSource;
     private float fireRate = 0.5f;
     private float currentFireRate = 0f;
     
-
+    public AudioClip GetClipToPlay
+    {
+        get
+        {
+            return clipToPlay;
+        }
+        set
+        {
+            clipToPlay = value;
+        }
+    }
     public int GetAmmo
     {
         get
@@ -74,9 +86,9 @@ public class Attack : MonoBehaviour
             fireTransform = value;
         }
     }
-    void Start()
+    private void Awake()
     {
-        //ammoCount = maxAmmoCount;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -142,6 +154,7 @@ public class Attack : MonoBehaviour
        
         currentFireRate = fireRate;  //atýþ hýzýný yeniledik.
         ammoCount -= 1;
+        audioSource.PlayOneShot(clipToPlay);
 
         if (isPlayer)
         {

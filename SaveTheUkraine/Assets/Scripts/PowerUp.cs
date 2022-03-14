@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    [SerializeField] private AudioClip clipToPlay;
+
     [Header("Health Settings")]
     public bool healthPowerUp = false;
     public int healAmount = 1;
@@ -19,12 +21,16 @@ public class PowerUp : MonoBehaviour
     [Header("Scale Settings")]
     [SerializeField] private float period = 2f;
     [SerializeField] private Vector3 scaleVector;
+    
+
+
     private float scaleFactor;
     private Vector3 startScale;
 
     private void Awake()
     {
-        startScale = transform.localScale;      
+        startScale = transform.localScale;
+        
     }
     void Start()
     {
@@ -83,8 +89,12 @@ public class PowerUp : MonoBehaviour
             {
                 other.gameObject.GetComponent<Attack>().GetAmmo += ammoAmount;
             }
+
+            //audioSource.PlayOneShot(clipToPlay); nesne ayný anda yok olduðu için çalýþmýyor. hem yok olup hem de ses çalamýyor.
+            AudioSource.PlayClipAtPoint(clipToPlay, transform.position);  // bu kod yok olan nesneler için doðru kullaným.
+
             Destroy(gameObject);
-            print(gameObject.name);
+            
         }        
     }
 

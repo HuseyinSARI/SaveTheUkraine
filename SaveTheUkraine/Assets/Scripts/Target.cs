@@ -7,6 +7,8 @@ public class Target : MonoBehaviour
     [SerializeField] private GameObject hitFX;
     [SerializeField] private GameObject deadFX;
     [SerializeField] private int maxHealth = 10;
+    [SerializeField] private AudioClip clipToPlay;
+    
     private bool isColliding = false;
 
     private int currentHealth;
@@ -28,7 +30,8 @@ public class Target : MonoBehaviour
 
     private void Awake()
     {
-       currentHealth = maxHealth;     
+       currentHealth = maxHealth;
+        
     }
     void Start()
     {
@@ -52,7 +55,9 @@ public class Target : MonoBehaviour
                 if (bullet.owner != gameObject) // for bullet not hit own owner - kurþunun kendi sahibini vurmamasý için
                 {
 
-                    currentHealth -= bullet.GetBulletPower;
+                currentHealth -= bullet.GetBulletPower;
+
+                AudioSource.PlayClipAtPoint(clipToPlay, transform.position);
                     
                     if (hitFX != null && currentHealth > 0)
                     {

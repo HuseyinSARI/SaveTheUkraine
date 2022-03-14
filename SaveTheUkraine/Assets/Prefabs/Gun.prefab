@@ -246,6 +246,7 @@ MonoBehaviour:
   fireTransform: {fileID: 0}
   fireRate: 0.3
   clipSize: 10
+  clip: {fileID: 8300000, guid: 1bae494782738de43a353eae6daf9c2b, type: 3}
 --- !u!1 &2543677023643435312
 GameObject:
   m_ObjectHideFlags: 0

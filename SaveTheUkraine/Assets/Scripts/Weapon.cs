@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Transform fireTransform;
     [SerializeField] private float fireRate;
     [SerializeField] private int clipSize;
+    [SerializeField] private AudioClip clip;
+
     private int currentAmmoCount;
 
     public int GetCurrentWeaponAmmoCount
@@ -46,6 +48,7 @@ public class Weapon : MonoBehaviour
             attack.GetFireRate = fireRate;
             attack.GetClipSize = clipSize;
             attack.GetAmmo = currentAmmoCount;
+            attack.GetClipToPlay = clip;
 
         }
     }

@@ -102,6 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e216d591d766747ab2ea30458e4ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: {fileID: 0}
+  fireTransform: {fileID: 0}
+  fireRate: 1
+  clipSize: 3
+  clip: {fileID: 8300000, guid: 344ba819bd85de84bb8de9f75c89c898, type: 3}
 --- !u!1 &612683525954131012
 GameObject:
   m_ObjectHideFlags: 0
