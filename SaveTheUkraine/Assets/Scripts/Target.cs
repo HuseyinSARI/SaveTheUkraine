@@ -8,6 +8,7 @@ public class Target : MonoBehaviour
     [SerializeField] private GameObject deadFX;
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private AudioClip clipToPlay;
+
     
     private bool isColliding = false;
 
@@ -27,6 +28,15 @@ public class Target : MonoBehaviour
             }
         }
     }
+    public int GetMaxHealth  //C# Priority
+    {
+        get
+        {
+            return maxHealth;
+        }
+        
+    }
+
 
     private void Awake()
     {
