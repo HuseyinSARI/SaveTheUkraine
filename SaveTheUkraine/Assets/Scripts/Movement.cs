@@ -9,10 +9,13 @@ public class Movement : MonoBehaviour
     [SerializeField] private float jumpPower = 13f;
     [SerializeField] private float turnSpeed = 15f;
     [SerializeField] private Transform[] rayStartPoints;
+    private GameManager gameManager;
+
 
     private void Awake()
     {
         rigidbodyRef = GetComponent<Rigidbody>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Start()
@@ -23,7 +26,10 @@ public class Movement : MonoBehaviour
     
     void Update()
     {
-        TakeInput();
+        if (!gameManager.GetLevelFinished)
+        {
+            TakeInput();
+        }
         
     }
 

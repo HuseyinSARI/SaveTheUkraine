@@ -58,6 +58,10 @@ public class Enemy : MonoBehaviour
 
     private bool Aim()
     {
+        if (aimTransform == null)
+        {
+            aimTransform = attackRef.GetFireTransform;
+        }
         bool hit = Physics.Raycast(aimTransform.position, -transform.right, shootRange,shootLayer);
         Debug.DrawRay(aimTransform.position, -transform.right * shootRange, Color.blue);
 

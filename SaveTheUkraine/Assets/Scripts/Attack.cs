@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject[] ammo;
     [SerializeField] private bool isPlayer = false;
 
+    private GameManager gameManager;
     private int maxAmmoCount = 5;
     private int ammoCount = 0;
     private Transform fireTransform;
@@ -15,6 +16,9 @@ public class Attack : MonoBehaviour
     private AudioSource audioSource;
     private float fireRate = 0.5f;
     private float currentFireRate = 0f;
+
+    public string selectedWeapon = "Pistol";
+    
     
     public AudioClip GetClipToPlay
     {
@@ -86,9 +90,13 @@ public class Attack : MonoBehaviour
             fireTransform = value;
         }
     }
+   
+    
+    
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -100,11 +108,12 @@ public class Attack : MonoBehaviour
         }
 
         PlayerInput();
+        
     }
 
     private void PlayerInput()
     {
-        if (isPlayer)
+        if (isPlayer && !gameManager.GetLevelFinished)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -113,6 +122,7 @@ public class Attack : MonoBehaviour
                     if (ammoCount > 0)
                     {
                         Fire();
+                        
                     }
                 }
 
@@ -125,12 +135,14 @@ public class Attack : MonoBehaviour
                   
                     weapons[0].SetActive(true);
                     weapons[1].SetActive(false);
+                    selectedWeapon = "Pistol";
                     break;
                 case "2":
                     weapons[0].gameObject.GetComponent<Weapon>().GetCurrentWeaponAmmoCount = ammoCount; //silah deðiþtirdiðinde kapattýðýmýz silahýn mermi sayýsýný silaha geri yolluyoruz.
                   
                     weapons[0].SetActive(false);
                     weapons[1].SetActive(true);
+                    selectedWeapon = "RPG";
                     break;
                 default:
                     break;
