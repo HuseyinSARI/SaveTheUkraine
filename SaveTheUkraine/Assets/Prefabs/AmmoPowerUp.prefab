@@ -215,7 +215,7 @@ MonoBehaviour:
   healthPowerUp: 0
   healAmount: 2
   ammoPowerUp: 1
-  ammoAmount: 3
+  ammoAmount: 10
   turnVector: {x: 1, y: 1, z: 1}
   period: 2
   scaleVector: {x: 0.13, y: 0.13, z: 0.13}

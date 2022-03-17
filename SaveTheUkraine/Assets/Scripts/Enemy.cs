@@ -79,9 +79,9 @@ public class Enemy : MonoBehaviour
         if (!canMoveRigth)
         {
             transform.position = Vector3.MoveTowards(transform.position
-                                                     ,new Vector3( movePoints[0].position.x
-                                                                   ,transform.position.y
-                                                                   ,movePoints[0].position.z)
+                                                     ,new Vector3( movePoints[0].position.x          
+                                                                   ,transform.position.y            //y açýsýný önemseme
+                                                                   , movePoints[0].position.z)
                                                      ,speed * Time.deltaTime);
             LookAtTheTarget(movePoints[0].position);
         }
@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position
                                                      , new Vector3(movePoints[1].position.x
-                                                                   , transform.position.y
+                                                                   , transform.position.y         //y açýsýný önemseme  
                                                                    , movePoints[1].position.z)
                                                      , speed * Time.deltaTime);
             LookAtTheTarget(movePoints[1].position);
@@ -97,10 +97,14 @@ public class Enemy : MonoBehaviour
     }
     private void CheckCanMoveRigth()
     {
-        if(Vector3.Distance(transform.position,movePoints[0].position) <= 0.1f){
+        if(Vector3.Distance(transform.position,new Vector3(movePoints[0].position.x
+                                                                   , transform.position.y        //y açýsýný önemseme       
+                                                                   , movePoints[0].position.z)) <= 0.1f){
             canMoveRigth = true;
         }
-        else if (Vector3.Distance(transform.position, movePoints[1].position) <= 0.1f)
+        else if (Vector3.Distance(transform.position, new Vector3(movePoints[1].position.x
+                                                                   , transform.position.y       //y açýsýný önemseme
+                                                                   , movePoints[1].position.z)) <= 0.1f)
         {
             canMoveRigth = false;
         }

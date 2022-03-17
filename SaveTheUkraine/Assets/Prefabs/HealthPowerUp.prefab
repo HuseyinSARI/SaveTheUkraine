@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clipToPlay: {fileID: 8300000, guid: 100b6997dc205ad4a9483dec6187a045, type: 3}
   healthPowerUp: 1
-  healAmount: 1
+  healAmount: 6
   ammoPowerUp: 0
   ammoAmount: 3
   turnVector: {x: 0, y: 0.5, z: 0}

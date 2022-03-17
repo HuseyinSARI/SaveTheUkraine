@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float turnSpeed = 15f;
     [SerializeField] private Transform[] rayStartPoints;
     private GameManager gameManager;
-
+    private bool canDoubleJump = false;
 
     private void Awake()
     {
@@ -35,16 +35,16 @@ public class Movement : MonoBehaviour
 
     private void TakeInput()
     {
-        //Left-Rigth
+        
         if (Input.GetKey(KeyCode.A))
         {
-            rigidbodyRef.velocity = new Vector3(Mathf.Clamp((speed*100) * Time.deltaTime,0f,15f) , rigidbodyRef.velocity.y, 0);
+            rigidbodyRef.velocity = new Vector3(Mathf.Clamp((speed*100) * Time.deltaTime,0f,5f) , rigidbodyRef.velocity.y, 0);
             // rigidbodyRef.rotation = Quaternion.Euler(0f, 180f,0f) ;  // hard rotation turn
             rigidbodyRef.rotation = Quaternion.Lerp(rigidbodyRef.rotation, Quaternion.Euler(0f, 179.99f, 0f), turnSpeed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            rigidbodyRef.velocity = new Vector3(Mathf.Clamp((-speed * 100) * Time.deltaTime,-15f,0f) , rigidbodyRef.velocity.y, 0);
+            rigidbodyRef.velocity = new Vector3(Mathf.Clamp((-speed * 100) * Time.deltaTime,-5f,0f) , rigidbodyRef.velocity.y, 0);
             // rigidbodyRef.rotation = Quaternion.Euler(0f, 0, 0f); // hard rotation turn
             rigidbodyRef.rotation = Quaternion.Lerp(rigidbodyRef.rotation, Quaternion.Euler(0f, 0.01f, 0f), turnSpeed * Time.deltaTime);
 
@@ -55,9 +55,18 @@ public class Movement : MonoBehaviour
         }
 
         //Jump
-        if (Input.GetKeyDown(KeyCode.Space) && OnGroundCheck() )
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime,0,15) , 0);
+            if (OnGroundCheck())
+            {
+                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 15), 0);
+                canDoubleJump = true;
+            }else if (canDoubleJump)
+            {
+                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 15), 0);
+                canDoubleJump = false;
+            }
+           
             
         }
         else
@@ -69,14 +78,17 @@ public class Movement : MonoBehaviour
     private bool OnGroundCheck()
     {
         bool hit = false;
+        
 
         for (int i = 0; i < rayStartPoints.Length; i++)
         {
             hit = Physics.Raycast(rayStartPoints[i].position, Vector3.down, 0.25f);
             Debug.DrawRay(rayStartPoints[i].position, Vector3.down * 0.25f, Color.red);
+            
         }
+        
          
-        if (hit)
+        if (hit )
         {
             return true;
         }
@@ -85,4 +97,6 @@ public class Movement : MonoBehaviour
             return false;
         }
     }
+
+    
 }

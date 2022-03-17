@@ -335,6 +335,7 @@ MonoBehaviour:
   - {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
   - {fileID: 5632917398140047410, guid: efc5b4e759798874982ccf76244daad0, type: 3}
   isPlayer: 0
+  selectedWeapon: Pistol
 --- !u!114 &3603296150852757884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +357,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   aimTransform: {fileID: 0}
-  reloadTime: 3
+  reloadTime: 5
 --- !u!114 &6730455307170581732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitFX: {fileID: 2443263360399287165, guid: 366ad4643297ffa4faa92ad5ed087ae4, type: 3}
   deadFX: {fileID: 2577746073332232421, guid: 86d3de1deeb2c164fa89a4d4c81fd1d1, type: 3}
-  maxHealth: 10
+  maxHealth: 5
   clipToPlay: {fileID: 8300000, guid: a96280ab0386e384fa0633e56101bb6f, type: 3}
 --- !u!82 &2980751986056004883
 AudioSource:
@@ -1066,7 +1067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5588314534450021911, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: fireRate
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -5588314534450021911, guid: 143c6c6447d8eaa4f98eba976a54b34a, type: 3}
       propertyPath: fireTransform

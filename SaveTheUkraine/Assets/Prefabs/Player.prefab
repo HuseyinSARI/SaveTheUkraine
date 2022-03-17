@@ -563,6 +563,7 @@ MonoBehaviour:
   - {fileID: 2206684750779811027, guid: 934773527e9f0254bb2be1472b1886cb, type: 3}
   - {fileID: 5632917398140047410, guid: efc5b4e759798874982ccf76244daad0, type: 3}
   isPlayer: 1
+  selectedWeapon: Pistol
 --- !u!114 &5240868860536565921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca2d0eb180899644bc58fdabdc72ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  jumpPower: 18
+  speed: 8
+  jumpPower: 11
   turnSpeed: 20
   rayStartPoints:
   - {fileID: 6998055668365286812}
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitFX: {fileID: 2443263360399287165, guid: 366ad4643297ffa4faa92ad5ed087ae4, type: 3}
   deadFX: {fileID: 2577746073332232421, guid: 86d3de1deeb2c164fa89a4d4c81fd1d1, type: 3}
-  maxHealth: 20
+  maxHealth: 8
   clipToPlay: {fileID: 8300000, guid: a96280ab0386e384fa0633e56101bb6f, type: 3}
 --- !u!82 &283619185457270319
 AudioSource:
