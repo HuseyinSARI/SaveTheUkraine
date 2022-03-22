@@ -59,11 +59,11 @@ public class Movement : MonoBehaviour
         {
             if (OnGroundCheck())
             {
-                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 15), 0);
+                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 8), 0);
                 canDoubleJump = true;
             }else if (canDoubleJump)
             {
-                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 15), 0);
+                rigidbodyRef.velocity = new Vector3(rigidbodyRef.velocity.x, Mathf.Clamp((jumpPower * 100) * Time.deltaTime, 0, 8), 0);
                 canDoubleJump = false;
             }
            

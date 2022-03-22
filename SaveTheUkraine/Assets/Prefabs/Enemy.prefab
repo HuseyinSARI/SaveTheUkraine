@@ -351,7 +351,7 @@ MonoBehaviour:
   movePoints:
   - {fileID: 0}
   - {fileID: 0}
-  speed: 5
+  speed: 4.5
   shootRange: 10
   shootLayer:
     serializedVersion: 2
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitFX: {fileID: 2443263360399287165, guid: 366ad4643297ffa4faa92ad5ed087ae4, type: 3}
   deadFX: {fileID: 2577746073332232421, guid: 86d3de1deeb2c164fa89a4d4c81fd1d1, type: 3}
-  maxHealth: 5
+  maxHealth: 3
   clipToPlay: {fileID: 8300000, guid: a96280ab0386e384fa0633e56101bb6f, type: 3}
 --- !u!82 &2980751986056004883
 AudioSource:

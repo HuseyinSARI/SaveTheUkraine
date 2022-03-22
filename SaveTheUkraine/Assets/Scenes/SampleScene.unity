@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: clipSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603296150852757884, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -313,7 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &39800468
 PrefabInstance:
@@ -581,6 +589,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: clipSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603296150852757884, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -1458,7 +1474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &628069377
 GameObject:
@@ -2464,7 +2480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -2507,6 +2523,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: clipSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603296150852757884, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -2604,7 +2628,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1855331505515208837, guid: 2ba8d9a64b11ee6408bf1ceb3fd6fece, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1855331505515208837, guid: 2ba8d9a64b11ee6408bf1ceb3fd6fece, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2946,6 +2970,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: clipSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603296150852757884, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -5226,6 +5258,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: clipSize
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570871660578657770, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
+      propertyPath: fireRate
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3603296150852757884, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: movePoints.Array.data[0]
       value: 
@@ -5240,7 +5280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4524005031886669748, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4524005031886669748, guid: e721884ab3595b547b7f745fceb290f0, type: 3}
       propertyPath: m_LocalPosition.x
